@@ -10,27 +10,31 @@ public class AccountTester {
         SavingAccount mohamedSaving = new SavingAccount();
         ChequingAccount mahmoudChequing = new ChequingAccount(1000);
         mohamedSaving.deposit(5000);
-//        mohamedSaving.addInterest(0.03);
-//        System.out.println("Chequing Account balance: "+mahmoudChequing.getBalance());
-//        System.out.println("Chequing account balance after withdraw 200 is : "+mahmoudChequing.withdrawAmt(200));
-//        System.out.println("Chequing account balance after withdraw 400 is : "+mahmoudChequing.withdrawAmt(400));
-//        System.out.println("Chequing account balance after withdraw 300 is : "+mahmoudChequing.withdrawAmt(300));
-//        System.out.println("Chequing account balance after withdraw 50  is : "+mahmoudChequing.withdrawAmt(50));
-//        mahmoudChequing.withdrawAmt(400);
-//        mahmoudChequing.withdrawAmt(300);
-//        mahmoudChequing.withdrawAmt(50);
-//        mohamedSaving.adjustInterestRate(0.05);
-//        System.out.println("Chequing Account fee\t: "+mahmoudChequing.transactionFee());
-//        System.out.println("Saving account balance  : "+mohamedSaving.getBalance());
+        mohamedSaving.addInterest(0.03);
+
+/*
+        System.out.println("Chequing Account balance: "+mahmoudChequing.getBalance());
+        System.out.println("Chequing account balance after withdraw 200 is : "+mahmoudChequing.withdrawAmt(200));
+        System.out.println("Chequing account balance after withdraw 400 is : "+mahmoudChequing.withdrawAmt(400));
+        System.out.println("Chequing account balance after withdraw 300 is : "+mahmoudChequing.withdrawAmt(300));
+        System.out.println("Chequing account balance after withdraw 50  is : "+mahmoudChequing.withdrawAmt(50));
+        mahmoudChequing.withdrawAmt(400);
+        mahmoudChequing.withdrawAmt(300);
+        mahmoudChequing.withdrawAmt(50);
+        mohamedSaving.adjustInterestRate(0.05);
+        System.out.println("Chequing Account fee\t: "+mahmoudChequing.transactionFee());
+        System.out.println("Saving account balance  : "+mohamedSaving.getBalance());
+*/
 
         String choice = "y";
         while (choice.equalsIgnoreCase("y")) {
-            System.out.println("Main Menu: \n" +
-                    "1- Deposit to Savings. \n" +
-                    "2- Deposit to chequing.  \n" +
-                    "3- Withdraw from chequing.\n" +
-                    "4- Transfer from one account to another. \n" +
-                    "5-Print balances of accounts. ");
+            System.out.println("""
+                    Main Menu:\s
+                    1- Deposit to Savings.\s
+                    2- Deposit to chequing. \s
+                    3- Withdraw from chequing.
+                    4- Transfer from one account to another.\s
+                    5-Print balances of accounts.\s""");
             System.out.print("Enter your choice: ");
             int number = input.nextInt();
             if (number == 1){
@@ -56,10 +60,12 @@ public class AccountTester {
 
                 }
             else if(number == 4){
+                System.out.println("""
+                        please enter your choice account you like to transfer to\s
+                        1.Chequing account.
+                        2.Saving account.""");
                 int to = input.nextInt();
-                System.out.println("please enter your choice account you like to transfer to " +
-                        "\n1.Chequing account." +
-                        "\n2.Saving account.");
+
                 if (to == 1){
                     System.out.println("enter the amount you like to transfer");
                     double amount = input.nextDouble();

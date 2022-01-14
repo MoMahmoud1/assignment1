@@ -30,23 +30,36 @@ public class BankAccount {
         return balance;
     }
 
+    /**
+     *
+     * @param balance to set balance
+     * @return balance
+     */
     public double setBalance(double balance) {
         this.balance = balance;
         return balance;
     }
 
+    /**
+     *
+     * @param depositAmount to bank account
+     */
     public void deposit(double depositAmount){
         // todo add constraints for negative
        if (depositAmount >= 0){
             this.balance+=depositAmount;
        }
     }
+
+    /**
+     *
+     * @param account chose bank account to transfer amount
+     * @param transferAmount the amount to be transferred
+     */
     public void transfer(BankAccount account, double transferAmount){
         balance -= transferAmount;
         account.balance+=transferAmount;
 
     }
-
-
 
 }
