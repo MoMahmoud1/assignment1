@@ -34,7 +34,11 @@ public class ChequingAccount extends BankAccount {
         this.transaction = 0;
 
     }
-
+    @Override
+    /**
+     * update transaction count
+     * @param depositAmount to bank account
+     */
     public  void deposit(double depositAmount){
         super.deposit(depositAmount);
         this.transaction++;
@@ -54,6 +58,7 @@ public class ChequingAccount extends BankAccount {
             System.out.println("invalid balance ");
         }
         else {
+            // todo update balance after withdraw and update fee
             updatedBalance = getBalance() - withdraw;
             transaction++;
         }

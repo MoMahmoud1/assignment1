@@ -26,6 +26,10 @@ public class BankAccount {
         this.balance = balance;
     }
 
+    /**
+     *
+     * @return balance amount
+     */
     public double getBalance() {
         return balance;
     }

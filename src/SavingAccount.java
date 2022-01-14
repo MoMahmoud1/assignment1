@@ -17,6 +17,10 @@ public class SavingAccount extends BankAccount{
     public SavingAccount() {
     }
 
+    /**
+     *
+     * @param newRate add new rate for saving account
+     */
     public void adjustInterestRate(double newRate) {
         this.interestRate = newRate;
 
