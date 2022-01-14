@@ -32,9 +32,10 @@ public class AccountTester {
                     Main Menu:\s
                     1- Deposit to Savings.\s
                     2- Deposit to chequing. \s
-                    3- Withdraw from chequing.
+                    3- Withdraw from chequing.\s
                     4- Transfer from one account to another.\s
-                    5-Print balances of accounts.\s""");
+                    5- Chequing account fee.\s
+                    6-Print balances of accounts.\s""");
             System.out.print("Enter your choice: ");
             int number = input.nextInt();
             if (number == 1){
@@ -81,9 +82,10 @@ public class AccountTester {
                     System.out.println("Saving  account balance is: "+mohamedSaving.getBalance());}
 
                 else {System.out.println("you entered invalid choice ");}
-
+            } else if(number == 5){
+                System.out.println("Chequing account fee : "+mahmoudChequing.transactionFee());
             }
-            else if(number == 5){
+            else if(number == 6){
                 System.out.println("Account balance: "+bankAccount.getBalance());
             }
             System.out.println("do you like to do more transaction (y/n)? ");
