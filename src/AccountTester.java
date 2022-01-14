@@ -25,11 +25,12 @@ public class AccountTester {
         System.out.println("Chequing Account fee\t: "+mahmoudChequing.transactionFee());
         System.out.println("Saving account balance  : "+mohamedSaving.getBalance());
 */
-
+        //todo repeat the condition
         String choice = "y";
         while (choice.equalsIgnoreCase("y")) {
+            //todo choice menu for the user
             System.out.println("""
-                    Main Menu:\s
+                    Choice Menu:\s
                     1- Deposit to Savings.\s
                     2- Deposit to chequing. \s
                     3- Withdraw from chequing.\s
@@ -37,21 +38,23 @@ public class AccountTester {
                     5- Chequing account fee.\s
                     6-Print balances of accounts.\s""");
             System.out.print("Enter your choice: ");
+            //todo get choice form the user
             int number = input.nextInt();
+            //todo execute the choice for the user ,deposit to saving amount
             if (number == 1){
                 System.out.print("Enter your deposit amount: ");
                 double amount = input.nextDouble();
                 mohamedSaving.deposit(amount);
                 System.out.println("this amount "+amount+" has been deposited");
                 System.out.println("saving account balance is:"+mohamedSaving.getBalance());}
-
+            //todo execute the choice for the user ,deposit to chequing amount
             else if(number == 2){
                 System.out.print("Enter your deposit amount: ");
                 double amount = input.nextDouble();
                 mahmoudChequing.deposit(amount);
                 System.out.println("this amount "+amount+" has been deposited");
                 System.out.println("saving account balance is:"+mahmoudChequing.getBalance());}
-
+            //todo execute the choice for the user ,withdraw to chequing amount
             else if (number == 3){
                 System.out.print("Enter your withdraw amount ");
                 double amount = input.nextDouble();
@@ -60,6 +63,7 @@ public class AccountTester {
                 System.out.println("Chequing account balance is:"+mahmoudChequing.getBalance());
 
                 }
+            //todo execute the choice for the user ,transfer amount form account to another
             else if(number == 4){
                 System.out.println("""
                         please enter your choice account you like to transfer to\s
@@ -82,9 +86,13 @@ public class AccountTester {
                     System.out.println("Saving  account balance is: "+mohamedSaving.getBalance());}
 
                 else {System.out.println("you entered invalid choice ");}
+                //todo execute the choice for the user ,show fee for chequing account transaction
             } else if(number == 5){
                 System.out.println("Chequing account fee : "+mahmoudChequing.transactionFee());
+
+
             }
+            //todo execute the choice for the user , show account balance
             else if(number == 6){
                 System.out.println("Account balance: "+bankAccount.getBalance());
             }
