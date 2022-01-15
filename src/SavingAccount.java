@@ -35,6 +35,17 @@ public class SavingAccount extends BankAccount{
 
         return getBalance()*addInterest/100.0;
     }
+//    @Override
+//    /**
+//     * @param depositAmount to bank account
+//     */
+//    public void deposit(double depositAmount){
+//        super.deposit(depositAmount);
+//        super.setBalance(depositAmount);
+//
+//
+//    }
+
 //    public double transfer(double transferAmount){
 //        return getBalance()-transferAmount ;
 //

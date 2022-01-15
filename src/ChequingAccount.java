@@ -39,7 +39,7 @@ public class ChequingAccount extends BankAccount {
      * update transaction count
      * @param depositAmount to bank account
      */
-    public  void deposit(double depositAmount){
+    public void deposit(double depositAmount){
         super.deposit(depositAmount);
         this.transaction++;
 
