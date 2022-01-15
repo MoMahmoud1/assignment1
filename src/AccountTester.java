@@ -8,28 +8,28 @@ public class AccountTester {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 //        BankAccount bankAccount = new BankAccount();
-        SavingAccount mohamedSaving = new SavingAccount();
-        ChequingAccount mahmoudChequing = new ChequingAccount();
 
 
-/*
-        System.out.println("Chequing Account balance: "+mahmoudChequing.getBalance());
-        System.out.println("Chequing account balance after withdraw 200 is : "+mahmoudChequing.withdrawAmt(200));
-        System.out.println("Chequing account balance after withdraw 400 is : "+mahmoudChequing.withdrawAmt(400));
-        System.out.println("Chequing account balance after withdraw 300 is : "+mahmoudChequing.withdrawAmt(300));
-        System.out.println("Chequing account balance after withdraw 50  is : "+mahmoudChequing.withdrawAmt(50));
-        mahmoudChequing.withdrawAmt(400);
-        mahmoudChequing.withdrawAmt(300);
-        mahmoudChequing.withdrawAmt(50);
-        mohamedSaving.adjustInterestRate(0.05);
-        System.out.println("Chequing Account fee\t: "+mahmoudChequing.transactionFee());
-        System.out.println("Saving account balance  : "+mohamedSaving.getBalance());
-*/
         //todo repeat the condition
         String userInput = "y";
         while (userInput.equalsIgnoreCase("y")) {
+            SavingAccount mohamedSaving = new SavingAccount();
+            ChequingAccount mahmoudChequing = new ChequingAccount(1000);
             mohamedSaving.deposit(5000);
             mohamedSaving.addInterest(0.03);
+
+
+            System.out.println("Chequing Account balance: "+mahmoudChequing.getBalance());
+            System.out.println("Chequing account balance after withdraw 200 is : "+mahmoudChequing.withdrawAmt(200));
+            System.out.println("Chequing account balance after withdraw 400 is : "+mahmoudChequing.withdrawAmt(400));
+            System.out.println("Chequing account balance after withdraw 300 is : "+mahmoudChequing.withdrawAmt(300));
+            System.out.println("Chequing account balance after withdraw 50  is : "+mahmoudChequing.withdrawAmt(50));
+            mahmoudChequing.withdrawAmt(400);
+            mahmoudChequing.withdrawAmt(300);
+            mahmoudChequing.withdrawAmt(50);
+            mohamedSaving.adjustInterestRate(0.05);
+            System.out.println("Chequing Account fee\t: "+mahmoudChequing.transactionFee());
+            System.out.println("Saving account balance  : "+mohamedSaving.getBalance());
             //todo userInput menu for the user
             System.out.println("""
                     Choice Menu:\s
@@ -96,8 +96,7 @@ public class AccountTester {
             }
             //todo execute the userInput for the user , show account balance
             else if(userChoice == 6){
-                double totalAmount = (mahmoudChequing.getBalance()+mohamedSaving.getBalance());
-                System.out.println("Account balance: "+totalAmount);
+                System.out.println("Account balance: "+(mahmoudChequing.getBalance()+mohamedSaving.getBalance()));
             }
             System.out.println("do you like to do more transaction (y/n)? ");
             userInput = input.next();
