@@ -24,9 +24,9 @@ public class AccountTester {
             System.out.println("Chequing account balance after withdraw 400 is : "+mahmoudChequing.withdrawAmt(400));
             System.out.println("Chequing account balance after withdraw 300 is : "+mahmoudChequing.withdrawAmt(300));
             System.out.println("Chequing account balance after withdraw 50  is : "+mahmoudChequing.withdrawAmt(50));
-            mahmoudChequing.withdrawAmt(400);
-            mahmoudChequing.withdrawAmt(300);
-            mahmoudChequing.withdrawAmt(50);
+//            mahmoudChequing.withdrawAmt(400);
+//            mahmoudChequing.withdrawAmt(300);
+//            mahmoudChequing.withdrawAmt(50);
             mohamedSaving.adjustInterestRate(0.05);
             System.out.println("Chequing Account fee\t: "+mahmoudChequing.transactionFee());
             System.out.println("Saving account balance  : "+mohamedSaving.getBalance());
